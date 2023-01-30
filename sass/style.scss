@@ -7,6 +7,10 @@ a {
     text-decoration: none;
 }
 
+h1, p {
+    margin: 0;
+}
+
 .container {
     max-width: 1440px;
     margin: 0 auto;
@@ -62,6 +66,11 @@ $color-red: #F53838;
     padding: 11px 0;
     border: 1px solid #FFF;
     border-radius: 50px;
+
+    &:hover {
+        border-color: #F53855;
+        color: #F53855;        
+    }
 }
 
 .btn-normal {
@@ -73,17 +82,32 @@ $color-red: #F53838;
     padding: 11px 0;
     border: 2px solid $color-red;
     border-radius: 50px;
+
+    &:hover {
+        @extend %hover-scale;
+        background: $color-red;
+        color: #FFF;
+        box-shadow: 0 12px 10px 0 rgba(245, 56, 56, 0.35);
+    }    
 }
 
 .btn-wide {
     @extend %btn;
     @include text-font-styles(700, 16px, 25px);
-    color: #FFF; 
+    color: $color-red; 
 
     width: 250px;
     padding: 15px 0;
     border: 2px solid $color-red;
     border-radius: 10px;
+
+    &:hover {
+        @extend %hover-scale;
+        background: $color-red;
+        color: #FFF;
+        box-shadow: 0 12px 10px 0 rgba(245, 56, 56, 0.35);
+    }
 }
 
 @import "header";
+@import "promo";

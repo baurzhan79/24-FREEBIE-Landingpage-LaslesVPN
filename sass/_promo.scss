@@ -1,0 +1,85 @@
+.promo-main {
+    display: flex;
+    flex-direction: column;
+    background: url("../design/illustration-1.png") bottom right no-repeat;
+    background-size: auto;
+}
+
+.promo-title {
+    @include text-font-styles(500, 50px, 70px);
+    color: $color-black;
+    margin-bottom: 20px;
+}
+
+.promo-subtitle {
+    @include text-font-styles(400, 16px, 30px);
+    color: $color-gray;
+    margin-bottom: 25px;
+}
+
+.promo-btn {
+    margin: 25px 0;
+}
+
+.promo-statistics {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.promo-statistics-col {
+    flex-grow: 1;
+    display: flex;
+    margin: 20px;
+}
+
+%promo-statistics-icon {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    margin-right: 35px;
+}
+
+.promo-statistics-icon-user {
+    @extend %promo-statistics-icon;
+    background: url("../design/icon-user.svg") center no-repeat;
+}
+
+.promo-statistics-icon-location {
+    @extend %promo-statistics-icon;
+    background: url("../design/icon-location.svg") center no-repeat;
+}
+
+.promo-statistics-icon-server {
+    @extend %promo-statistics-icon;
+    background: url("../design/icon-server.svg") center no-repeat;
+}
+
+.promo-statistics-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.promo-statistics-maintext {
+    @include text-font-styles(700, 25px, 30px);
+    color: $color-black;
+}
+
+.promo-statistics-subtext {
+    @include text-font-styles(400, 20px, 30px);
+    color: $color-gray;
+}
+
+@media screen and (min-width: 1000px) {
+    .promo-title {
+        width: 50%;
+    }
+    
+    .promo-subtitle {
+        width: 50%;
+    }
+
+    .promo-statistics {
+        margin-top: 100px;
+    }
+}
