@@ -3,4 +3,135 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 450px) {
+  .container {
+    padding: 20px 50px;
+  }
+}
+@media screen and (min-width: 850px) {
+  .container {
+    padding: 30px 100px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .container {
+    padding: 50px 150px;
+  }
+}
+.btn-wide, .btn-normal, .btn-small {
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.header-menu__item:hover, .logo:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.btn-small {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #0B132A;
+  width: 150px;
+  padding: 11px 0;
+  border: 1px solid #FFF;
+  border-radius: 50px;
+}
+
+.btn-normal {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #F53838;
+  width: 170px;
+  padding: 11px 0;
+  border: 2px solid #F53838;
+  border-radius: 50px;
+}
+
+.btn-wide {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 25px;
+  color: #FFF;
+  width: 250px;
+  padding: 15px 0;
+  border: 2px solid #F53838;
+  border-radius: 10px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo::before {
+  content: url("../design/icon-logo.png");
+  width: 40px;
+  height: 40px;
+}
+.logo__text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #0B132A;
+}
+.logo__text--bold {
+  font-weight: 700;
+}
+.logo:hover .logo__text {
+  color: #F53838;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-menu {
+  flex-grow: 1;
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.header-menu__item {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #4F5665;
+  margin: 10px 20px;
+}
+.header-menu__item:hover {
+  color: #F53838;
+}
+
+.header-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.header-buttons__btn {
+  margin: 10px;
+}
+.header-buttons__btn:hover {
+  border-color: #F53855;
+  color: #F53855;
+}
+
 /*# sourceMappingURL=style.css.map */

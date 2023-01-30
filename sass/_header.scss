@@ -1,0 +1,71 @@
+.logo {
+    display: flex;
+    align-items: center;
+
+    &::before {
+        content: url("../design/icon-logo.png");
+        width: 40px;
+        height: 40px;    
+    }
+
+    &__text {
+        @include text-font-styles(500, 20px, 24px);
+        color: $color-black;
+        
+        &--bold {
+            font-weight: 700;
+        }
+
+    }
+
+    &:hover {
+        @extend %hover-scale;
+    }    
+
+    &:hover &__text {
+        color: $color-red;
+    }    
+
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-menu {
+    flex-grow: 1;
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__item {
+        @include text-font-styles(400, 16px, 19px);
+        color: $color-gray;
+        margin: 10px 20px;
+
+        &:hover {
+            @extend %hover-scale;
+            color: $color-red;
+        }        
+    }    
+}
+
+.header-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;   
+
+    &__btn {
+        margin: 10px;
+        
+        &:hover {
+            border-color: #F53855;
+            color: #F53855;        
+        }
+    }
+}
