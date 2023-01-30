@@ -1,8 +1,32 @@
+.promo {
+    margin-top: 100px;
+}
+
 .promo-main {
     display: flex;
-    flex-direction: column;
+    position: relative;
+}
+
+.promo-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 50%;
+    z-index: -1;
     background: url("../design/illustration-1.png") bottom right no-repeat;
-    background-size: auto;
+    background-size: 100% auto;
+}
+
+.promo-content {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 800px) {
+    .promo-content {
+        flex-basis: 50%;
+    }
 }
 
 .promo-title {
@@ -71,14 +95,6 @@
 }
 
 @media screen and (min-width: 1000px) {
-    .promo-title {
-        width: 50%;
-    }
-    
-    .promo-subtitle {
-        width: 50%;
-    }
-
     .promo-statistics {
         margin-top: 100px;
     }

@@ -7,7 +7,7 @@ a {
   text-decoration: none;
 }
 
-h1, p {
+h1, h2, p {
   margin: 0;
 }
 
@@ -148,13 +148,36 @@ h1, p {
   margin: 10px;
 }
 
-.promo-main {
-  display: flex;
-  flex-direction: column;
-  background: url("../design/illustration-1.png") bottom right no-repeat;
-  background-size: auto;
+.promo {
+  margin-top: 100px;
 }
 
+.promo-main {
+  display: flex;
+  position: relative;
+}
+
+.promo-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 50%;
+  z-index: -1;
+  background: url("../design/illustration-1.png") bottom right no-repeat;
+  background-size: 100% auto;
+}
+
+.promo-content {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 800px) {
+  .promo-content {
+    flex-basis: 50%;
+  }
+}
 .promo-title {
   font-weight: 500;
   font-size: 50px;
@@ -226,16 +249,72 @@ h1, p {
 }
 
 @media screen and (min-width: 1000px) {
-  .promo-title {
-    width: 50%;
-  }
-
-  .promo-subtitle {
-    width: 50%;
-  }
-
   .promo-statistics {
     margin-top: 100px;
+  }
+}
+.about {
+  background: linear-gradient(to bottom, rgba(211, 211, 211, 0.3) 0%, white 50%);
+  display: flex;
+  position: relative;
+}
+.about-img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  background: url("../design/illustration-2.png") bottom left no-repeat;
+  background-size: 100% auto;
+}
+.about-content {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.about-title {
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 50px;
+  color: #0B132A;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.about-subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #4F5665;
+  margin-bottom: 20px;
+}
+.about-list {
+  list-style: none;
+  padding: 0;
+}
+.about-list__item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  color: #4F5665;
+  display: flex;
+  align-items: center;
+}
+.about-list__item::before {
+  content: url("../design/icon-tick.svg");
+  width: 30px;
+  height: 30px;
+}
+
+@media screen and (min-width: 800px) {
+  .about {
+    justify-content: flex-end;
+  }
+  .about-img {
+    left: 0;
+    right: 60%;
+  }
+  .about-content {
+    flex-basis: 50%;
   }
 }
 
