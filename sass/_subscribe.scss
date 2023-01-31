@@ -1,0 +1,45 @@
+.subscribe {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    background: #F8F8F8;
+    box-shadow: 0 7px 7px 0 rgba(211, 211, 211, 0.6);
+    padding: 0 10px;
+    box-sizing: border-box;
+
+    margin-top: -250px;
+    margin-bottom: 100px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    &-col {
+        padding: 30px 0;
+    }
+
+    &__title {
+        @include text-font-styles(500, 35px, 45px);
+        color: $color-black;
+        max-width: 370px;
+        padding-bottom: 10px;
+    }
+
+    &__subtitle {
+        @include text-font-styles(400, 16px, 30px);
+        color: $color-gray;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .subscribe {
+        padding: 0 40px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .subscribe {
+        padding: 0 70px;
+    }
+}

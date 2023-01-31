@@ -1,0 +1,91 @@
+.footer {
+    padding-top: 150px;
+    padding-bottom: 50px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__col {
+        padding-right: 50px;
+        padding-bottom: 50px;
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+    &__logo {
+        padding-bottom: 20px;
+    }
+
+    &__text {
+        @include text-font-styles(400, 16px, 30px);
+        color: $color-black;
+        max-width: 340px;
+
+        &--bold {
+            font-weight: 500;
+        }
+    }
+}
+
+%socialicon {
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    margin-right: 20px;
+
+    &:hover {
+        @extend %hover-scale;
+        box-shadow: 0 12px 10px 0 rgb(211, 211, 211);
+    }  
+}
+
+.socialicons {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &__facebook {
+        @extend %socialicon;
+        background: url("../design/icon-facebook.svg");
+        background-position-x: -17px;
+        background-position-y: -5px;
+    }
+
+    &__twitter {
+        @extend %socialicon;
+        background: url("../design/icon-twitter.svg");
+        background-position-x: -18px;
+        background-position-y: -5px;
+    }
+
+    &__instagram {
+        @extend %socialicon;
+        background: url("../design/icon-instagram.svg");
+        background-position-x: -18px;
+        background-position-y: -5px;
+    }
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+
+    &__title {
+        @include text-font-styles(500, 18px, 30px);
+        color: $color-black;
+        padding-bottom: 10px;
+    }
+
+    &__item {
+        @include text-font-styles(400, 16px, 30px);
+        color: $color-gray;
+
+        &:hover {
+            color: $color-red;
+        }
+    }
+
+}
