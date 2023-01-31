@@ -7,7 +7,7 @@ a {
     text-decoration: none;
 }
 
-h1, h2, p {
+h1, h2, h3, p {
     margin: 0;
 }
 
@@ -112,3 +112,4 @@ $color-red: #F53838;
 @import "header";
 @import "promo";
 @import "about";
+@import "tariffs";

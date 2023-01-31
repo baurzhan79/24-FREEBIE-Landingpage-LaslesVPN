@@ -7,7 +7,7 @@ a {
   text-decoration: none;
 }
 
-h1, h2, p {
+h1, h2, h3, p {
   margin: 0;
 }
 
@@ -200,6 +200,7 @@ h1, h2, p {
 
 .promo-statistics {
   margin-top: 50px;
+  padding-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -257,6 +258,7 @@ h1, h2, p {
   background: linear-gradient(to bottom, rgba(211, 211, 211, 0.3) 0%, white 50%);
   display: flex;
   position: relative;
+  margin-bottom: 135px;
 }
 .about-img {
   position: absolute;
@@ -300,7 +302,7 @@ h1, h2, p {
   align-items: center;
 }
 .about-list__item::before {
-  content: url("../design/icon-tick.svg");
+  content: url("../design/icon-tick-circle.svg");
   width: 30px;
   height: 30px;
 }
@@ -315,6 +317,108 @@ h1, h2, p {
   }
   .about-content {
     flex-basis: 50%;
+  }
+}
+.tariffs {
+  background: linear-gradient(to bottom, rgba(211, 211, 211, 0.3) 0%, white 50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tariffs__title {
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 50px;
+  color: #0B132A;
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+.tariffs__subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #4F5665;
+  max-width: 555px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.tariff-box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.tariff__icon-standart, .tariff__icon-free {
+  display: inline-block;
+  width: 150px;
+  height: 170px;
+}
+
+.tariff {
+  border: 2px solid #DDD;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.tariff__col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tariff__icon-free {
+  background: url("../design/icon-tariff-free.png") center no-repeat;
+}
+.tariff__icon-standart {
+  background: url("../design/icon-tariff-standard.png") center no-repeat;
+}
+.tariff__title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: #0B132A;
+  padding: 30px 0;
+}
+.tariff-list {
+  list-style: none;
+  padding: 0;
+}
+.tariff-list__item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  color: #4F5665;
+  display: flex;
+  align-items: center;
+}
+.tariff-list__item::before {
+  content: url("../design/icon-tick.svg");
+  width: 30px;
+  height: 30px;
+}
+.tariff__price {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  color: #0B132A;
+  padding-bottom: 20px;
+  margin-top: 50px;
+}
+.tariff__price--opacity {
+  opacity: 0.5;
+}
+.tariff:hover {
+  border-color: #F53838;
+}
+
+@media screen and (min-width: 800px) {
+  .tariff {
+    padding: 50px;
   }
 }
 

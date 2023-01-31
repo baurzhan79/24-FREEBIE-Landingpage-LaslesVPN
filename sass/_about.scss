@@ -2,6 +2,7 @@
     background: linear-gradient(to bottom, rgba(211, 211, 211, 0.3) 0%, white 50%);    
     display: flex;
     position: relative;
+    margin-bottom: 135px;
 
     &-img {
         position: absolute;
@@ -44,7 +45,7 @@
             align-items: center;
     
             &::before {
-                content: url("../design/icon-tick.svg");
+                content: url("../design/icon-tick-circle.svg");
                 width: 30px;
                 height: 30px;
             }

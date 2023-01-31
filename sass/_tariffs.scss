@@ -1,0 +1,107 @@
+.tariffs {
+    background: linear-gradient(to bottom, rgba(211, 211, 211, 0.3) 0%, white 50%);    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        @include text-font-styles(500, 35px, 50px);
+        color: $color-black;
+        padding-top: 80px;
+        padding-bottom: 20px;
+    }
+
+    &__subtitle {
+        @include text-font-styles(400, 16px, 30px);
+        color: $color-gray;
+        max-width: 555px;
+        text-align: center;
+        padding-bottom: 40px;
+    }
+}
+
+.tariff-box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+%tariff-icon {
+    display: inline-block;
+    width: 150px;
+    height: 170px;
+}
+
+.tariff {
+    border: 2px solid #DDD;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 20px 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+    }
+
+    &__icon-free {
+        @extend %tariff-icon;
+        background: url("../design/icon-tariff-free.png") center no-repeat;
+    }
+
+    &__icon-standart {
+        @extend %tariff-icon;
+        background: url("../design/icon-tariff-standard.png") center no-repeat;
+    }
+
+    &__title {
+        @include text-font-styles(500, 18px, 30px);
+        color: $color-black;
+        padding: 30px 0;
+    }
+
+    &-list {
+        list-style: none;
+        padding: 0;
+
+        &__item {
+            @include text-font-styles(400, 14px, 30px);
+            color: $color-gray;
+            display: flex;
+            align-items: center;
+    
+            &::before {
+                content: url("../design/icon-tick.svg");
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    &__price {
+        @include text-font-styles(500, 25px, 30px);
+        color: $color-black;
+        padding-bottom: 20px;
+        margin-top: 50px;
+        
+        &--opacity {
+            opacity: 0.5;
+        }
+    }
+
+    &:hover {
+        border-color: $color-red;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .tariff {
+        padding: 50px;     
+    }
+}
