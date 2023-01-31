@@ -421,5 +421,51 @@ h1, h2, h3, p {
     padding: 50px;
   }
 }
+.network {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.network__title {
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 50px;
+  color: #0B132A;
+  max-width: 385px;
+}
+.network__subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #4F5665;
+  max-width: 555px;
+  padding-top: 20px;
+}
+.network-map {
+  margin-top: 70px;
+}
+.network-map__img {
+  display: block;
+  width: 100%;
+}
+.network-sponsors {
+  margin-bottom: 50px;
+}
+.network-sponsors__img {
+  display: block;
+  width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  .network-map {
+    margin-top: 150px;
+  }
+
+  .network-sponsors {
+    margin-bottom: 100px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

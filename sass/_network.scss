@@ -1,0 +1,48 @@
+.network {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &__title {
+        @include text-font-styles(500, 35px, 50px);
+        color: $color-black;
+        max-width: 385px;
+    }
+
+    &__subtitle {
+        @include text-font-styles(400, 16px, 30px);
+        color: $color-gray;
+        max-width: 555px;
+        padding-top: 20px;
+    }
+
+    &-map {
+        margin-top: 70px;
+
+        &__img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    &-sponsors {
+        margin-bottom: 50px;
+
+        &__img {
+            display: block;
+            width: 100%;
+        }        
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .network-map {
+        margin-top: 150px;
+    }
+
+    .network-sponsors {
+        margin-bottom: 100px;   
+    }
+}
